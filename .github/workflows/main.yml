@@ -12,6 +12,9 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    permissions:  # 👈 Required to allow pushing back to the repo
+      contents: write
 
     steps:
       - name: Checkout code
